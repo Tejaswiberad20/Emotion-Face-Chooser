@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlubTaggler</title>
+    <style>
+        body{
+            background-color: #000;
+        }
+        .box{
+            margin-left: 20%;
+            height: 800px;
+            width: 700px;
+            background-color: #bd3c3c;
+        }
+        .onBlub{
+         
+            margin-left:  30%;
+            height: 400px;
+            width: 400px;
+        }
+        .btn{
+            display: inline;
+            margin-left: 250px;
+            padding: 10px 20px;
+            border-radius: 50px;
+            background-color: orangered;
+            border: none;
+            color: #fff;
+            width: 100px;
+        }
+        .off{
+            color: black;
+            background-color: #fff;
+            display: inline;
+            margin: 90px;
+            padding: 10px 20px;
+            border-radius: 50px;
+            border: none;
+            width: 100px;
+        }
+        @media screen and (max-width:605px) {
+            .box{
+                width: 90%;
+                margin-left:10%;
+                background-color: aliceblue;
+            }
+            .onBlub{
+                width: 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+    <img src="off-blub.jpg"class="onBlub"id="blulb">
+    <button type="button" class="btn"onclick="blulbOn()">On</button>
+    <button  type="button" class=" off"onclick="blulbOff()">Off</button>
+    <script>
+        const blulbElement=document.getElementById('blulb');
+        function blulbOn(){
+            blulbElement.src="on-blub.jpg";
+        
+        }
+        function blulbOff(){
+            blulbElement.src="off-blub.jpg ";
+
+        }
+    </script>
+</div>
+</body>
+</html>
