@@ -3,71 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BlubTaggler</title>
+    <title>Emotion Face Chooser</title>
     <style>
         body{
             background-color: #000;
         }
         .box{
-            margin-left: 20%;
-            height: 800px;
-            width: 700px;
-            background-color: #bd3c3c;
+            display: block;
+            margin:50px auto;
+            height: 300px;
+            width: 300px;
+            background-color:#fff;
+            border-radius: 50px;
+            box-shadow: 0 0 5px 1px #fff;
         }
-        .onBlub{
-         
-            margin-left:  30%;
-            height: 400px;
-            width: 400px;
+        .happy{
+            padding-top: 50px;
+            display: block;
+            margin:20px auto;
+            height: 200px;
+            width: 200px;
         }
         .btn{
             display: inline;
-            margin-left: 250px;
+            margin-left: 40%;
             padding: 10px 20px;
             border-radius: 50px;
-            background-color: orangered;
+            background-color: #fff;
             border: none;
-            color: #fff;
+            color: #050505;
+            font-size: 15px;
+            font-weight: 300;
             width: 100px;
         }
-        .off{
+        .sad{
             color: black;
             background-color: #fff;
             display: inline;
-            margin: 90px;
+            margin: 50px;
             padding: 10px 20px;
+            font-size: 15px;
             border-radius: 50px;
             border: none;
             width: 100px;
         }
-        @media screen and (max-width:605px) {
+        @media screen and (max-width:505px) {
             .box{
                 width: 90%;
                 margin-left:10%;
                 background-color: aliceblue;
             }
-            .onBlub{
+            .happy{
                 width: 50%;
+            }
+            .btn sad{
+                margin-left: 50%;
             }
         }
     </style>
 </head>
 <body>
     <div class="box">
-    <img src="off-blub.jpg"class="onBlub"id="blulb">
-    <button type="button" class="btn"onclick="blulbOn()">On</button>
-    <button  type="button" class=" off"onclick="blulbOff()">Off</button>
+    <img src="happy.png"class="happy"id="happy">
+</div>
+    <button type="button" class="btn"onclick="happy()">Happy</button>
+    <button  type="button" class="sad"onclick="sad()">Sad</button>
     <script>
-        const blulbElement=document.getElementById('blulb');
-        function blulbOn(){
-            blulbElement.src="on-blub.jpg";
+        const emojiElement=document.getElementById('happy');
+        function happy(){
+            emojiElement.src="happy.png";
         
         }
-        function blulbOff(){
-            blulbElement.src="off-blub.jpg ";
+        function sad(){
+            emojiElement.src="sad.png ";
 
         }
     </script>
-</div>
 </body>
 </html>
